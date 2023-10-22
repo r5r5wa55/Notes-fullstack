@@ -1,0 +1,79 @@
+
+https://memo8.com/git-basic-command/
+
+การใช้งาน github
+
+1 การติดตั้ง 
+git init
+
+2 เช็ค status
+git status
+-จะมีไฟล์ที่เป็นสีแดง แสดงว่ายังไม่ได้ add *สามารถ checkout ได้ (checkout=ย้อนคืน)
+
+3 การ add 
+git add ชื่อไฟล์+นามสกุลไฟล์ (เพิ่มแค้ไฟล์ที่กำหนด)
+git add.  (เพิ่มทั้งหมดใน directory)
+-การ add จะเป็นการเพิ่มไฟล์ใหม่เข้าไปเก็บใน Staging และถ้าใช้  git status ไฟล์ที่แสดงจะเป็นสีเขียว *ไม่สามารถ checkout ได้ 
+-ทุกครั่้งที่ code มีการเพิ่ม หรือเปลี่ยนแปลง จะต้อง add ใหม่
+
+4 การ commit
+git commit -m "ข้อความที่จะคอมเม้น"
+-การ comnit การเก็บประวัติของไฟล์ต่างๆ ในโปรเจ็คต์ที่อยู่ใน Loca (Loca = ภายในเครื่องของเรา)
+
+5 การ log
+git log 
+-จะแสดง log ที่เคย commit ไป 
+
+6 diff 
+git diff ชื่อไฟล์+นามสกุลไฟล์
+-จะแสดงความแตกต่างของ code สีแดง และ สีเขียว  
+-เราสามารถย้อน code จากสีแดง ไปเป็นสีเขียวได้ *ไฟล์ที่แสดงจากการใช้ git status ต้องเป็นสีแดง ไม่งั้นจะไม่สามารถใช้ checkout ได้
+
+7 checkout 
+git checkout ชื่อไฟล์+นามสกุลไฟล์
+-ใช้ git status จะแสดงไฟล์
+-ไฟล์เป็นสีแดง แสดงว่ายังไม่ได้ add *สามารถ checkout ได้ (checkout=ย้อนคืน)
+-ไฟล์เป็นสีเขียว แสดงว่าได้รับการ add แล้ว ไม่สามารถ checkout ได้ (checkout=ย้อนคืน)
+
+8 rm  
+git rm ชื่อไฟล์+นามสกุลไฟล์
+-คำสั่งลบไฟล์หรือโฟลเดอร์ออกจาก git (ไม่ใช่การลบไฟล์ออกจากโปรเจ็ค)
+
+9 git reset ชื่อไฟล์+นามสกุลไฟล์
+-คำสั่งยกเลิกเมื่อเราสั่ง git add ไปแล้ว
+
+
+
+
+การใช้งาน github.com 
+
+1 สร้าง github.com
+
+2 git remote add origin https://github.com/r5r5wa55/we.git 
+    
+3 git branch -M main
+
+4 git push -u origin main
+-การ push จะต้องเกิดหลังจากการ commit 
+
+การใช้งาน gitignore
+gitignore ใช้เพื่ออะไร เพือไม่ให้ไฟล์ที่เราไม่อยากอัพขึ้นไปยัง git เชื่อไฟล์พวก api DB 
+
+1 tocuh .gitignore
+-สร้างไฟล์ .gitignore
+-สามารถใช้ ls -a เพื่อดูไฟล์ .gitignore ได้ เนื่องจากไฟล์จะทำการซ่อนอยู่
+
+2 เปิดไฟล์ 
+code .gitignore 
+-ใน window
+open -a /Application/Visual\ Studio\Code.app .gitignore
+-ใน mac
+
+3 การเพิม ไฟล์ที่ไม่อยากอัพขึ้นไปยัง git เชื่อไฟล์พวก api DB 
+-ใส่ชื่อ+นามสกุลไฟล์ ในไฟล์ .gitignore
+
+****gitignore ที่มีคนสร้างไว้แล้ว
+-https://github.com/github/gitignore/blob/main/Node.gitignore
+
+****ใช้เมือขึ่นว่า execute two git commands  exit คือ มีการรันคำสั่ง git สองคำสั่ง
+git stash pop && git add . && git commit -m "updated pom file" && git push
