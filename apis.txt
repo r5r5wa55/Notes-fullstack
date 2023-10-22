@@ -5,3 +5,8 @@
 https://bored-api.appbrewery.com/random 
 -ส่วนหลังจาก .com จะเรียกกันว่า endpoint ซุึ่งในที่นี้คือ random  
 -endpoint จะมีหลายแบบด้วยกัน
+
+https://bored-api.appbrewery.com/endpoint?query-value 
+-ค่าเดียว
+https://bored-api.appbrewery.com/endpoint?query-value&query2-value 
+-หลายค่า
