@@ -42,7 +42,8 @@ git rm ชื่อไฟล์+นามสกุลไฟล์
 9 git reset ชื่อไฟล์+นามสกุลไฟล์
 -คำสั่งยกเลิกเมื่อเราสั่ง git add ไปแล้ว
 
-10 git merge 
+10 git merge ชื้อ branchที่หลักที่อยากจะทำการรวมเข้าด้วย
+-ใช้เมื่อทำการ push ขึ้นไปแล้ว
 
 
 การใช้งาน github.com 
@@ -53,7 +54,7 @@ git rm ชื่อไฟล์+นามสกุลไฟล์
     
 3 git branch -M main
 
-4 git push -u origin main
+4 git push -u origin main (ชื้่อ branch ที่จะ push ในที่นี้คือ main)
 -การ push จะต้องเกิดหลังจากการ commit 
 
 การใช้งาน gitignore
