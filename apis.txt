@@ -1,0 +1,7 @@
+
+การใข้งาน api
+
+
+https://bored-api.appbrewery.com/random 
+-ส่วนหลังจาก .com จะเรียกกันว่า endpoint ซุึ่งในที่นี้คือ random  
+-endpoint จะมีหลายแบบ
